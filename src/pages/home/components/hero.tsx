@@ -4,7 +4,7 @@ import Search from "@/pages/essential/search";
 import { Box, Button, Flex, Text, TextInput } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { BiSearch } from "react-icons/bi";
-import { FiUploadCloud } from "react-icons/fi";
+import { FiDownload, FiUploadCloud } from "react-icons/fi";
 
 const arrow = (
   <svg
@@ -87,7 +87,7 @@ const Hero = () => {
                     }}
                   >
                     {" "}
-                    Download
+                    Download <FiDownload size={"1.5em"} />
                   </Box>
                 </ButtonInterface>
 

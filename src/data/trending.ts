@@ -1,33 +1,20 @@
 export const trending = [
     {
-        title: 'Dem go fill am' ,
-        aritstName: 'Dj Kumzy',
-        cover: 'https://res.cloudinary.com/dhdqt4xwu/image/upload/v1683062322/gurumusic/ab67616d00001e02b8cd46ecb560c4dd4a83adb1_zeseha.jpg'
+        title: 'Son of the Soil' ,
+        aritstName: 'Mobeezy',
+        cover: 'https://res.cloudinary.com/dhdqt4xwu/image/upload/v1683063888/gurumusic/photo_5949595922457541142_y_1_uzidwq.jpg'
     },
     {
-        title: 'Whine it ' ,
+        title: 'Okpoor ' ,
         aritstName: 'King RJB',
-        cover: 'https://res.cloudinary.com/dhdqt4xwu/image/upload/v1683062319/gurumusic/ab6761610000101fe2ce42a2c54222ef97384212_kuxidb.webp'
+        cover: 'https://res.cloudinary.com/dhdqt4xwu/image/upload/v1683063719/gurumusic/photo_5949595922457541143_y_zaxuc5.jpg'
     },
+   
     {
-        title: 'Dem go fill am' ,
-        aritstName: 'Dj Kumzy',
-        cover: 'https://res.cloudinary.com/dhdqt4xwu/image/upload/v1683062326/gurumusic/ab676161000051741cf142a710a2f3d9b7a62da1_ucmsua.jpg'
+        title: 'Trapstar' ,
+        aritstName: 'Carter Doggy Black',
+        cover: 'https://res.cloudinary.com/dhdqt4xwu/image/upload/v1683063715/gurumusic/photo_5949595922457541146_y_glsbwu.jpg'
     },
-    {
-        title: 'Dem go fill am' ,
-        aritstName: 'Dj Kumzy',
-        cover: ''
-    },
-    {
-        title: 'Dem go fill am' ,
-        aritstName: 'Dj Kumzy',
-        cover: ''
-    },
-    {
-        title: 'Dem go fill am' ,
-        aritstName: 'Dj Kumzy',
-        cover: ''
-    }
+  
     
 ]

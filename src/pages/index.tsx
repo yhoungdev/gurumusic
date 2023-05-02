@@ -1,11 +1,17 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "next/font/google";
 import Homepage from "./home/homepage";
+import Loader from "@/components/micro/loader";
+import { useEffect, useState } from "react";
+import { Box } from "@mantine/core";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const [loader, setLoader] = useState("block");
+  useEffect(() => {
+    setTimeout(() => setLoader("none"), 2000);
+  });
   return (
     <>
       <Head>
@@ -14,6 +20,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Box display={loader}>
+        <Loader />
+      </Box>
       <Homepage />
     </>
   );

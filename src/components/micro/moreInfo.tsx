@@ -5,6 +5,7 @@ const MoreInfo = () => {
   const isMobile = useMediaQuery("(max-width: 700px)");
   return (
     <Flex
+      className="font_clash_display_medium"
       py={"4em"}
       justify={"center"}
       h={"95vh"}
@@ -52,6 +53,10 @@ const MoreInfo = () => {
             lg: "90px",
           }}
           align={isMobile ? "center" : "left"}
+          data-aos={"fade-up"}
+          style={{
+            fontFamily: "var(--primary-font)",
+          }}
         >
           {" "}
           Artists speaks the most
@@ -74,6 +79,7 @@ const MoreInfo = () => {
           backgroundSize: "contain",
           alignItems: "center",
         }}
+        data-aos={isMobile ? "fade-up" : "fade-right"}
       ></Box>
     </Flex>
   );

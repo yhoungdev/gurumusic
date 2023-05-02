@@ -31,7 +31,7 @@ const Hero = () => {
   );
   return (
     <>
-      <Box>
+      <Box bg={"#F2FFF7"}>
         <ContainerLayout>
           <Flex
             justify={"center"}
@@ -46,10 +46,23 @@ const Hero = () => {
               w={{ base: "100%", md: "80%", lg: "700px" }}
               my="2em"
             >
-              <Text size={isMobile ? "30px" : "64px"} weight={"600"}>
-                Discover opportunities to real collaborations
+              <Text
+                size={isMobile ? "30px" : "64px"}
+                weight={"bold"}
+                style={{
+                  fontFamily: "var(--primary-font)",
+                }}
+              >
+                Listen to sounds what you love
               </Text>
-              <Text my={"1em"}>Enjoy music everywhere , anywhere </Text>
+              <Text
+                my={"1em"}
+                style={{
+                  fontFamily: "var(--primary-font)",
+                }}
+              >
+                It&apos;s never been easier to find the best music{" "}
+              </Text>
 
               <ButtonInterface px={"4em"} size="xl">
                 <Box

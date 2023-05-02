@@ -52,6 +52,7 @@ const InfoBox = () => {
             lg: "90px",
           }}
           align={isMobile ? "center" : "left"}
+          data-aos={isMobile ? "fade-up" : "fade-right"}
         >
           {" "}
           Collaboration that matters
@@ -74,6 +75,7 @@ const InfoBox = () => {
           backgroundSize: "contain",
           alignItems: "center",
         }}
+        data-aos={isMobile ? "fade-up" : "fade-left"}
       ></Box>
     </Flex>
   );

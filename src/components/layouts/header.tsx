@@ -95,32 +95,34 @@ const Header = () => {
   const sizeSignUpDrawer = isMobile ? "100%" : "lg";
   return (
     <>
-      <ContainerLayout>
-        <Box>
-          <Flex align={"center"} py={"em"} justify={"space-between"}>
-            <Box>
-              <Logo />
-            </Box>
+      <Box bg={"#F2FFF7"} py={"1em"}>
+        <ContainerLayout>
+          <Box>
+            <Flex align={"center"} py={"em"} justify={"space-between"}>
+              <Box>
+                <Logo />
+              </Box>
 
-            <Box display={{ ...largeView }}>
-              <Flex align={"center"} gap={"1.2em"}>
-                <Text
-                  sx={{
-                    cursor: "pointer",
-                  }}
-                  onClick={openLogin}
-                >
-                  Login
-                </Text>
-                <ButtonInterface onClick={openSignin}>
-                  Create Account
-                </ButtonInterface>
-              </Flex>
-            </Box>
-          </Flex>
-        </Box>
-      </ContainerLayout>
-
+              <Box display={{ ...largeView }}>
+                <Flex align={"center"} gap={"1.2em"}>
+                  <Text
+                    sx={{
+                      cursor: "pointer",
+                      color: "black",
+                    }}
+                    onClick={openLogin}
+                  >
+                    Login
+                  </Text>
+                  <ButtonInterface onClick={openSignin}>
+                    Create Account
+                  </ButtonInterface>
+                </Flex>
+              </Box>
+            </Flex>
+          </Box>
+        </ContainerLayout>
+      </Box>{" "}
       {/* open login drawer */}
       <Drawer
         opened={logged}
@@ -131,7 +133,6 @@ const Header = () => {
       >
         <SignIn />
       </Drawer>
-
       <Drawer
         opened={signed}
         onClose={closeSignin}
@@ -141,7 +142,6 @@ const Header = () => {
       >
         <SignUp />
       </Drawer>
-
       <Drawer opened={opened} onClose={close} size={sizeDrawer}>
         <List
           display="flex"

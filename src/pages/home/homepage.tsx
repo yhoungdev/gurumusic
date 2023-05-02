@@ -4,14 +4,16 @@ import Footer from "@/components/layouts/footer";
 import InfoBox from "@/components/micro/infoBlock";
 import MoreInfo from "@/components/micro/moreInfo";
 import ArtistInfo from "./components/artistInfo";
+import TrendingOnHomepage from "./components/trending";
 const Homepage = () => {
   return (
     <>
       <Header />
       <Hero />
-      <InfoBox />
+      <TrendingOnHomepage />
+      {/* <InfoBox />
       <MoreInfo />
-      <ArtistInfo />
+      <ArtistInfo /> */}
 
       {/* <Footer /> */}
     </>

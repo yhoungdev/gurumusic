@@ -1,8 +1,10 @@
 import ButtonInterface from "@/components/micro/buttonInterface";
 import ContainerLayout from "@/layouts/containerLayout";
+import Search from "@/pages/essential/search";
 import { Box, Button, Flex, Text, TextInput } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { BiSearch } from "react-icons/bi";
+import { FiUploadCloud } from "react-icons/fi";
 
 const arrow = (
   <svg
@@ -31,18 +33,18 @@ const Hero = () => {
   );
   return (
     <>
-      <Box bg={"#F2FFF7"}>
+      <Box>
         <ContainerLayout>
           <Flex
             justify={"center"}
             sx={{
               textAlign: "center",
             }}
-            h={"80vh"}
+            h={"60vh"}
             align={"center"}
           >
             <Box
-              c={"#101318"}
+              c={"white"}
               w={{ base: "100%", md: "80%", lg: "700px" }}
               my="2em"
             >
@@ -53,7 +55,7 @@ const Hero = () => {
                   fontFamily: "var(--primary-font)",
                 }}
               >
-                Listen to sounds what you love
+                Listen to sounds that you love
               </Text>
               <Text
                 my={"1em"}
@@ -64,20 +66,44 @@ const Hero = () => {
                 It&apos;s never been easier to find the best music{" "}
               </Text>
 
-              <ButtonInterface px={"4em"} size="xl">
-                <Box
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "1em",
-                  }}
-                >
-                  {" "}
-                  Get Started {arrow}
-                </Box>
-              </ButtonInterface>
+              <Box my={"2em"}>
+                <Search />
+              </Box>
 
-              <Box></Box>
+              <Flex
+                gap={"1em"}
+                justify={"center"}
+                direction={{
+                  base: "column",
+                  lg: "row",
+                }}
+              >
+                <ButtonInterface px={"4em"} size="xl">
+                  <Box
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "1em",
+                    }}
+                  >
+                    {" "}
+                    Download
+                  </Box>
+                </ButtonInterface>
+
+                <ButtonInterface px={"4em"} size="xl">
+                  <Box
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "1em",
+                    }}
+                  >
+                    {" "}
+                    Upload <FiUploadCloud size={"1.5em"} />
+                  </Box>
+                </ButtonInterface>
+              </Flex>
             </Box>
           </Flex>
         </ContainerLayout>

@@ -95,7 +95,7 @@ const Header = () => {
   const sizeSignUpDrawer = isMobile ? "100%" : "lg";
   return (
     <>
-      <Box bg={"#F2FFF7"} py={"1em"}>
+      <Box py={"1em"}>
         <ContainerLayout>
           <Box>
             <Flex align={"center"} py={"em"} justify={"space-between"}>

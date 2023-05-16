@@ -5,7 +5,13 @@ import { Box, Button, Flex, Text, TextInput } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { BiSearch } from "react-icons/bi";
 import { FiDownload, FiUploadCloud } from "react-icons/fi";
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Autoplay } from "swiper";
+import { FaMusic } from "react-icons/fa";
+import { RxMixerVertical } from "react-icons/rx";
+import { MdOutlineAlbum } from "react-icons/md";
 const arrow = (
   <svg
     width="16"
@@ -22,6 +28,38 @@ const arrow = (
     />
   </svg>
 );
+
+const OtherNavs = () => {
+  return (
+    <Flex
+      p={"1em"}
+      gap={"2em"}
+      justify={"center"}
+      w={"fit-content"}
+      mx={"auto"}
+      px={"2em"}
+      style={{
+        border: "1px solid gray",
+        borderRadius: "10px",
+      }}
+    >
+      <Box>
+        <MdOutlineAlbum size={"1.5em"} color="red" />
+        <Text>Album</Text>
+      </Box>
+
+      <Box>
+        <FaMusic size={"1.5em"} color="red" />
+        <Text>Playlist</Text>
+      </Box>
+
+      <Box>
+        <RxMixerVertical size={"1.5em"} color="red" />
+        <Text>DJ Mix</Text>
+      </Box>
+    </Flex>
+  );
+};
 
 const Hero = () => {
   const isMobile = useMediaQuery("(max-width: 768px)");
@@ -48,15 +86,47 @@ const Hero = () => {
               w={{ base: "100%", md: "80%", lg: "700px" }}
               my="2em"
             >
-              <Text
-                size={isMobile ? "30px" : "64px"}
-                weight={"bold"}
-                style={{
-                  fontFamily: "var(--primary-font)",
+              <Swiper
+                spaceBetween={30}
+                centeredSlides={true}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
                 }}
+                pagination={{
+                  clickable: true,
+                }}
+                navigation={true}
+                modules={[Autoplay]}
+                className="mySwiper"
               >
-                Listen to sounds that you love
-              </Text>
+                <SwiperSlide>
+                  {" "}
+                  <Text
+                    size={isMobile ? "30px" : "64px"}
+                    weight={"bold"}
+                    style={{
+                      fontFamily: "var(--primary-font)",
+                    }}
+                  >
+                    Listen to sounds that you love
+                  </Text>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  {" "}
+                  <Text
+                    size={isMobile ? "30px" : "64px"}
+                    weight={"bold"}
+                    style={{
+                      fontFamily: "var(--primary-font)",
+                    }}
+                  >
+                    Stream Best Hit Sounds
+                  </Text>
+                </SwiperSlide>
+              </Swiper>
+
               <Text
                 my={"1em"}
                 style={{
@@ -78,7 +148,7 @@ const Hero = () => {
                   lg: "row",
                 }}
               >
-                <ButtonInterface px={"4em"} size="xl">
+                {/* <ButtonInterface px={"4em"} size="xl">
                   <Box
                     style={{
                       display: "flex",
@@ -89,9 +159,9 @@ const Hero = () => {
                     {" "}
                     Download <FiDownload size={"1.5em"} />
                   </Box>
-                </ButtonInterface>
+                </ButtonInterface> */}
 
-                <ButtonInterface px={"4em"} size="xl">
+                {/* <ButtonInterface px={"4em"} size="xl">
                   <Box
                     style={{
                       display: "flex",
@@ -102,7 +172,8 @@ const Hero = () => {
                     {" "}
                     Upload <FiUploadCloud size={"1.5em"} />
                   </Box>
-                </ButtonInterface>
+                </ButtonInterface> */}
+                <OtherNavs />
               </Flex>
             </Box>
           </Flex>

@@ -12,6 +12,7 @@ import Logo from "../micro/logo";
 import { useMediaQuery } from "@mantine/hooks";
 import SignIn from "../popup_contents/auth_popup/signIn";
 import SignUp from "../popup_contents/auth_popup/signUp";
+import { BsFillCloudArrowUpFill } from "react-icons/bs";
 
 const Header = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false); // state to track whether sidebar is open
@@ -104,6 +105,18 @@ const Header = () => {
               </Box>
 
               <Box display={{ ...largeView }}>
+                <Flex justify={"space-between"} gap={"4em"}>
+                  {["Profile", "Event & Ticket", "Guru world"].map((items) => {
+                    return (
+                      <>
+                        <Text>{items}</Text>
+                      </>
+                    );
+                  })}
+                </Flex>
+              </Box>
+
+              <Box>
                 <Flex align={"center"} gap={"1.2em"}>
                   <Text
                     sx={{
@@ -114,9 +127,18 @@ const Header = () => {
                   >
                     Login
                   </Text>
-                  <ButtonInterface onClick={openSignin}>
+                  {/* <ButtonInterface onClick={openSignin}>
                     Create Account
-                  </ButtonInterface>
+                  </ButtonInterface> */}
+                  <Box
+                    style={{
+                      textAlign: "center",
+                      cursor: "pointer",
+                    }}
+                  >
+                    <BsFillCloudArrowUpFill size={"1.8em"} color="red" />
+                    <Text align="center">Upload</Text>
+                  </Box>
                 </Flex>
               </Box>
             </Flex>

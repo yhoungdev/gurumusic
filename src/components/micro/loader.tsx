@@ -9,7 +9,7 @@ const Loader = () => {
       left={0}
       right={0}
       style={{
-        zIndex: "1",
+        zIndex: "999999",
       }}
     >
       <Flex

@@ -136,7 +136,7 @@ const Header = () => {
                       cursor: "pointer",
                     }}
                   >
-                    <BsFillCloudArrowUpFill size={"1.8em"} color="red" />
+                    <BsFillCloudArrowUpFill size={"1.8em"} fill={"red"} />
                     <Text align="center">Upload</Text>
                   </Box>
                 </Flex>

@@ -11,13 +11,13 @@ const Search = () => {
   return (
     <>
       <TextInput
-        placeholder="Search music"
+        placeholder="Search for songs"
         rightSection={btn}
         styles={{
           input: {
             padding: "2.5em 2em",
             borderRadius: "2em",
-            background: "#1F1F1F",
+            background: "#fff",
             border: "none",
             color: "#fff",
           },

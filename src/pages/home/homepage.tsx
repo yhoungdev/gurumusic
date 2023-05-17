@@ -8,7 +8,6 @@ import TrendingOnHomepage from "./components/trending";
 const Homepage = () => {
   return (
     <>
-      <Header />
       <Hero />
       <TrendingOnHomepage />
       {/* <InfoBox />

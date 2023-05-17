@@ -12,6 +12,8 @@ import { Autoplay } from "swiper";
 import { FaMusic } from "react-icons/fa";
 import { RxMixerVertical } from "react-icons/rx";
 import { MdOutlineAlbum } from "react-icons/md";
+import Header from "@/components/layouts/header";
+
 const arrow = (
   <svg
     width="16"
@@ -71,7 +73,8 @@ const Hero = () => {
   );
   return (
     <>
-      <Box>
+      <Box className="hero-gradient">
+        <Header />
         <ContainerLayout>
           <Flex
             justify={"center"}

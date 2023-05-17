@@ -11,6 +11,11 @@ body {
     font-family: var(--primary-font);
 }
 
+.hero-gradient {
+  background-image: linear-gradient(to bottom right ,  rgba(100, 7, 7, 0.197) , rgba(0, 0, 0, 0) , rgba(2, 108, 85, 0.087) ) !important;
+}
+
+
 .font_clash_display_medium {
     font-family: var(--clash_display) !important;
     font-weight: 500;

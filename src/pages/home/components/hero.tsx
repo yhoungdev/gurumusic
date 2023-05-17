@@ -14,6 +14,15 @@ import { RxMixerVertical } from "react-icons/rx";
 import { MdOutlineAlbum } from "react-icons/md";
 import Header from "@/components/layouts/header";
 
+const imageAsset = [
+  "https://res.cloudinary.com/dhdqt4xwu/image/upload/v1684342743/gurumusic/music_hero_section/13_zqrnrv.jpg",
+  "https://res.cloudinary.com/dhdqt4xwu/image/upload/v1684342740/gurumusic/music_hero_section/14_lmljrv.jpg",
+  ,
+  "https://res.cloudinary.com/dhdqt4xwu/image/upload/v1684342739/gurumusic/music_hero_section/15_s2eqdx.jpg",
+  ,
+  "https://res.cloudinary.com/dhdqt4xwu/image/upload/v1684342744/gurumusic/music_hero_section/12_wy43ca.jpg",
+];
+
 const arrow = (
   <svg
     width="16"
@@ -63,6 +72,22 @@ const OtherNavs = () => {
   );
 };
 
+const SliderImage = ({ url }: { url: any }) => {
+  return (
+    <Box
+      w={"100%"}
+      mx={"auto"}
+      h={"200px"}
+      style={{
+        backgroundImage: `url(${url})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
+    ></Box>
+  );
+};
+
 const Hero = () => {
   const isMobile = useMediaQuery("(max-width: 768px)");
 
@@ -103,7 +128,7 @@ const Hero = () => {
                 modules={[Autoplay]}
                 className="mySwiper"
               >
-                <SwiperSlide>
+                {/* <SwiperSlide>
                   {" "}
                   <Text
                     size={isMobile ? "30px" : "64px"}
@@ -127,17 +152,26 @@ const Hero = () => {
                   >
                     Stream Best Hit Sounds
                   </Text>
-                </SwiperSlide>
+                </SwiperSlide> */}
+                {imageAsset.map((items, index) => {
+                  return (
+                    <Box key={index}>
+                      <SwiperSlide>
+                        <SliderImage url={items} />
+                      </SwiperSlide>
+                    </Box>
+                  );
+                })}
               </Swiper>
 
-              <Text
+              {/* <Text
                 my={"1em"}
                 style={{
                   fontFamily: "var(--primary-font)",
                 }}
               >
                 It&apos;s never been easier to find the best music{" "}
-              </Text>
+              </Text> */}
 
               <Box my={"2em"}>
                 <Search />
@@ -151,31 +185,6 @@ const Hero = () => {
                   lg: "row",
                 }}
               >
-                {/* <ButtonInterface px={"4em"} size="xl">
-                  <Box
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "1em",
-                    }}
-                  >
-                    {" "}
-                    Download <FiDownload size={"1.5em"} />
-                  </Box>
-                </ButtonInterface> */}
-
-                {/* <ButtonInterface px={"4em"} size="xl">
-                  <Box
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "1em",
-                    }}
-                  >
-                    {" "}
-                    Upload <FiUploadCloud size={"1.5em"} />
-                  </Box>
-                </ButtonInterface> */}
                 <OtherNavs />
               </Flex>
             </Box>

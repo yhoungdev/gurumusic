@@ -4,8 +4,22 @@ import MusicBox from "@/pages/essential/musicBox";
 import { Text, Box, Flex, Avatar } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { FaDownload, FaPlay } from "react-icons/fa";
+import { useRouter } from "next/router";
+const MobileTreding = ({ name, title, cover, url }: any) => {
+  const router = useRouter();
+  function downloadFile(url: any) {
+    if (typeof document !== "undefined") {
+      const link = document.createElement("a");
+      link.href = url;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } else {
+      // Handle server-side download
+      // router.push(url);
+    }
+  }
 
-const MobileTreding = ({ name, title, cover }: any) => {
   return (
     <Flex
       align={"center"}
@@ -23,7 +37,11 @@ const MobileTreding = ({ name, title, cover }: any) => {
 
       <Flex gap={"1em"}>
         <FaPlay color="red" />
-        <FaDownload color="red" />
+        {/* @ts-ignore */}
+
+        <a href={url} rel="noopener noreferrer" download>
+          <FaDownload color="red" />
+        </a>
       </Flex>
     </Flex>
   );
@@ -51,6 +69,7 @@ const TrendingOnHomepage = () => {
                 name={items.aritstName}
                 title={items.title}
                 cover={items.cover}
+                url={items.sound}
               />
             </>
           );

@@ -15,12 +15,11 @@ import { MdOutlineAlbum } from "react-icons/md";
 import Header from "@/components/layouts/header";
 
 const imageAsset = [
-  "https://res.cloudinary.com/dhdqt4xwu/image/upload/v1684342743/gurumusic/music_hero_section/13_zqrnrv.jpg",
-  "https://res.cloudinary.com/dhdqt4xwu/image/upload/v1684342740/gurumusic/music_hero_section/14_lmljrv.jpg",
+  "https://res.cloudinary.com/dhdqt4xwu/image/upload/v1684345487/gurumusic/music_hero_section/se_fqhnro.png",
+  "https://res.cloudinary.com/dhdqt4xwu/image/upload/v1684345487/gurumusic/music_hero_section/se_fqhnro.png",
   ,
-  "https://res.cloudinary.com/dhdqt4xwu/image/upload/v1684342739/gurumusic/music_hero_section/15_s2eqdx.jpg",
-  ,
-  "https://res.cloudinary.com/dhdqt4xwu/image/upload/v1684342744/gurumusic/music_hero_section/12_wy43ca.jpg",
+  "https://res.cloudinary.com/dhdqt4xwu/image/upload/v1684345484/gurumusic/music_hero_section/234_h9jjrr.png",
+  "https://res.cloudinary.com/dhdqt4xwu/image/upload/v1684345481/gurumusic/music_hero_section/bgh_fgacbv.png",
 ];
 
 const arrow = (
@@ -77,11 +76,11 @@ const SliderImage = ({ url }: { url: any }) => {
     <Box
       w={"100%"}
       mx={"auto"}
-      h={"200px"}
+      h={"300px"}
       style={{
         backgroundImage: `url(${url})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
+        backgroundPosition: "bottom",
+        backgroundSize: "contain",
         backgroundRepeat: "no-repeat",
       }}
     ></Box>
